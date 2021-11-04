@@ -8,11 +8,11 @@
  * Example
  * > sayHello("codeup") // returns "Hello, codeup!"
  */
-function sayHello(name) {
+function sayHello1(name) {
    return "hello, "+ name+"!"
 
 }
-console.log(sayHello("everett"))
+console.log(sayHello1("everett"))
 /**
  * TODO:
  * Call the function 'sayHello' and pass your name as a string literal argument.
@@ -21,12 +21,12 @@ console.log(sayHello("everett"))
  * console.log 'helloMessage' to check your work
  */
 
-  function 'sayHello'('everett'){
+  function sayHello (name){
 
-   console.log('helloMessage') + ('everett')
+   console.log('helloMessage' + name)
 }
 
-());
+;
 
 
    
@@ -38,9 +38,11 @@ console.log(sayHello("everett"))
  * console.
  */
 
-var ('myName')
+var myName = "Everett"
 
-function('sayHello')
+sayHello(myName)
+
+
 
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
@@ -64,32 +66,14 @@ var random = Math.floor((Math.random() * 3) + 1);
  * number)
  */
 
-function isTwo(4)
-{
-      return false;
-   }else{
-      return true;
-
-   console.log(isTwo)(4)
-
-   function isTwo(3)
-   {
-      return false;
-   }else{
-      return true;
-
-   console.log(isTwo)(3)
-
-      function isTwo(2)
-      {
-         return false;
-      }else{
-         return true;
-
-   console.log(isTwo)(2)
+function isTwo(number) {
+   if (number === 2) {
+      return true
+   } else {
+      return false
+   }
 }
-
-{));
+isTwo(4)
 
 
 
@@ -105,7 +89,12 @@ function isTwo(4)
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
 
-function 'calculateTip'
+function calculateTip(x,y){
+   return (x*y)/100
+}
+calculateTip(0.20,20)
+
+
 
 /**
  * TODO:
@@ -114,6 +103,10 @@ function 'calculateTip'
  * then display the dollar amount they should tip
  */
 
+var billTotal = prompt("Bill total?")
+var percentage = prompt("Percentage?")
+var tipAmount = calculateTip(billTotal,percentage)
+   alert("You should tip " + tipAmount)
 /**
  * TODO:
  * Create a function named `applyDiscount`. This function should accept a price
@@ -128,3 +121,11 @@ function 'calculateTip'
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
+
+function applyDiscount(x,y){
+    return x-((x*y)/100)
+
+}
+
+var finalPrice = applyDiscount(100,.2)
+    alert("The final price is " + finalPrice )

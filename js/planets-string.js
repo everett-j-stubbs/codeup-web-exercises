@@ -38,4 +38,4 @@
 
         document.write(unorderedListOfPlanets);
 
-})();
+});
