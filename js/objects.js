@@ -12,6 +12,12 @@
      *  > console.log(person.lastName) // "Sanchez"
      */
 
+    var person = {
+        firstName: "Everett",
+        lastName: "Stubbs"
+    }
+    console.log(person.firstName) //"Everett"
+    console.log(person.lastName) //"Stubbs"
     /**
      * TODO:
      * Add a sayHello method to the person object that returns a greeting using
@@ -21,6 +27,11 @@
      * Example
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
+
+    person.sayHello=function(){
+        return("Hello from " + person.firstName + person.lastName)
+    }
+    console.log(person.sayHello())
 
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
@@ -36,12 +47,21 @@
      * and console.log the relevant messages for each person
      */
 
-    // var shoppers = [
-    //     {name: 'Cameron', amount: 180},
-    //     {name: 'Ryan', amount: 250},
-    //     {name: 'George', amount: 320}
-    // ];
+    var shoppers = [
+        {name: 'Cameron', amount: 180},
+        {name: 'Ryan', amount: 250},
+        {name: 'George', amount: 320}
+    ];
+var discount = 12/100
+    shoppers.forEach(function(shopper){
+        if(shopper.amount>200){
+            var bill = shopper.amount-(shopper.amount*discount)
+            console.log(shopper.name + "Has to pay" + bill)
 
+        }else{
+            console.log(shopper.name + "Didn't qualify for discount")
+        }
+    })
     /** TODO:
      * Create an array of objects that represent books and store it in a
      * variable named `books`. Each object should have a title and an author
@@ -55,6 +75,34 @@
      * > console.log(books[0].author.lastName) // "Adams"
      */
 
+    var books=[
+        {title: "Roll of Thunder, Hear My Cry",
+            author: {
+            firstName: "Mildred D.",
+            lastName: "Taylor"}},
+
+        {title: "The Sun Also Rises",
+            author: {
+            firstName: "Ernest",
+            lastName: "Hemingway"}},
+
+        {title: "A Time to Kill",
+            author: {
+            firstName: "John",
+            lastName: "Grisham"}},
+
+        {title: "Band of Brothers",
+            author: {
+            firstName: "Stephen E.",
+            lastName: "Ambrose"}},
+
+        {title: "The Dark Tower",
+            author: {
+            firstName: "Stephen",
+            lastName: "King"}}
+
+    ]
+    console.log(books[0].title)
     /**
      * TODO:
      * Loop through the books array and output the following information about
@@ -79,6 +127,15 @@
      *      ---
      *      ...
      */
+
+    for(var i=0; i<books.length; i++){
+        var book=books[i]
+        console.log("book # " +(i+1))
+        console.log("title" + book.title)
+        console.log("author" + book.author.firstName + " "+ book.author.lastName)
+        console.log("---")
+
+    }
 
     /**
      * Bonus:
