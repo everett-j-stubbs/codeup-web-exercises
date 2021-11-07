@@ -1,0 +1,34 @@
+fancy-header {
+    color: purple; /* single line comment */
+    text-decoration: underline;
+}
+h1{
+    text-align: center;
+}
+h1,h2{
+    color: blue;
+    text-decoration: underline;
+}
+body{
+    background-color: purple;
+    font-family: "Monotype Corsiva", sans-serif;
+}
+td,tr{
+    padding: 5px;
+    font-size: 25px;
+}
+ul{
+    list-style: square;
+}
+a:link{
+    color:gray;
+}
+a:hover{
+    color:green;
+}
+a:active{
+    color: blue;
+}
+a:visited{
+    color: orange;
+}
